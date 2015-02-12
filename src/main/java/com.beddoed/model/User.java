@@ -1,13 +1,15 @@
 package com.beddoed.model;
 
 public class User {
-    private final String id;
-    private final String name;
+    private String id;
+    private String name;
 
     public User(String id, String name) {
         this.id = id;
         this.name = name;
     }
+
+    public User() { }
 
     public String getId() {
         return id;
@@ -15,5 +17,9 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public String toString() {
+        return getId() + " - " + getName();
     }
 }
